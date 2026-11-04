@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#131317">
+  <title>K 校园计划 · 管理后台</title>
+  <link rel="icon" href="../assets/kiro-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./admin.css?v=20261104-1">
+  <script src="./admin.js?v=20261104-1" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="../"><img class="brand-icon" src="../assets/kiro-icon.svg" alt=""><span>K 校园计划 <small>K CAMPUS IDEA</small></span></a><div class="top-actions"><a href="../" target="_blank" rel="noopener">查看官网 ↗</a><button class="text-button" id="logout" type="button" hidden>退出登录</button></div></header>
+  <main class="shell">
+    <section class="login card" id="login-view">
+      <div class="eyebrow">K CAMPUS IDEA / ADMIN</div><h1>欢迎回来。</h1><p>登录后管理报名和活动内容。</p>
+      <form id="login-form"><label>管理员账号<input name="username" autocomplete="username" required maxlength="80"></label><label>密码<input name="password" type="password" autocomplete="current-password" required maxlength="256"></label><button class="button primary" type="submit">登录后台 <span>↗</span></button><p class="status" role="status" aria-live="polite"></p></form>
+    </section>
+    <section id="app-view" hidden>
+      <div class="heading"><div><div class="eyebrow">K CAMPUS IDEA / ADMIN</div><h1>活动管理</h1><p>把好点子和参加的人，都照顾好。</p></div><a class="button outline" href="../" target="_blank" rel="noopener">查看官网 ↗</a></div>
+      <nav class="tabs" aria-label="后台功能"><button class="tab active" type="button" data-tab="registrations" aria-current="page">报名管理</button><button class="tab" type="button" data-tab="content">内容发布</button><button class="tab" type="button" data-tab="mail">企业邮箱</button><button class="tab" type="button" data-tab="account">账户安全</button></nav>
+      <div class="panel" id="panel-registrations">
+        <div class="panel-heading"><div><h2>报名信息 <span class="count" id="registration-count">0</span></h2><p>查看、搜索或转发参赛信息。</p></div><a class="button outline" href="../api/admin/registrations.csv">导出报名表 ↓</a></div>
+        <div class="toolbar"><label class="search-label"><span class="sr-only">搜索报名信息</span><input id="search" type="search" placeholder="搜索姓名、院系、赛道或联系方式"></label><button class="button subtle" id="refresh-registrations" type="button">刷新</button></div>
+        <div class="card table-card"><div class="table-scroll"><table><thead><tr><th>姓名</th><th>学校 / 院系</th><th>赛道</th><th>参与方式</th><th>报名时间</th><th></th></tr></thead><tbody id="registration-rows"></tbody></table></div><p class="empty" id="registration-empty" hidden>还没有报名信息。</p></div>
+      </div>
+      <div class="panel" id="panel-content" hidden>
+        <div class="panel-heading"><div><h2>内容发布</h2><p>发布后会显示在官网「活动公告」中。</p></div><button class="button primary" id="new-announcement" type="button">＋ 新建公告</button></div>
+        <div class="content-grid"><div class="card announcement-list" id="announcement-list"></div><form class="card editor" id="announcement-form"><div class="editor-heading"><h3 id="editor-title">新建公告</h3><span class="badge" id="editor-state">草稿</span></div><label>标题<input name="title" maxlength="100" required placeholder="例如：参赛安排更新"></label><label>正文<textarea name="body" maxlength="4000" rows="9" required placeholder="写下想告诉大家的内容"></textarea></label><div class="form-actions"><button class="button subtle" type="button" id="save-draft">保存草稿</button><button class="button primary" type="submit">发布到官网 ↗</button></div><p class="status" role="status" aria-live="polite"></p></form></div>
+      </div>
+      <div class="panel" id="panel-mail" hidden>
+        <div class="panel-heading"><div><h2>企业邮箱</h2><p>接入后，可将报名信息转发到指定邮箱。</p></div><span class="connection" id="mail-state">未接入</span></div>
+        <form class="card settings-form" id="mail-form"><div class="form-grid"><label>SMTP 服务器<input name="host" required maxlength="253" placeholder="如 smtp.exmail.qq.com" autocomplete="off"></label><label>加密方式<select name="security" required><option value="ssl">SSL · 465</option><option value="starttls">STARTTLS · 587</option></select></label><label>邮箱账号<input name="username" required maxlength="254" autocomplete="off" placeholder="企业邮箱账号"></label><label>发件邮箱<input name="from_address" type="email" required maxlength="254" placeholder="name@company.com"></label><label>发件人名称<input name="from_name" maxlength="80" placeholder="K 校园计划"></label><label>SMTP 授权码<input name="password" type="password" maxlength="256" autocomplete="new-password" placeholder="输入邮箱提供的 SMTP 授权码"></label></div><p class="field-note" id="mail-password-note">请先在邮箱服务商处开启 SMTP 并获取授权码。</p><div class="form-actions"><button class="button primary" type="submit">保存邮箱设置</button></div><p class="status" role="status" aria-live="polite"></p></form>
+      </div>
+      <div class="panel" id="panel-account" hidden><div class="panel-heading"><div><h2>账户安全</h2><p>修改管理员登录密码。</p></div></div><form class="card settings-form narrow" id="password-form"><label>当前密码<input name="current" type="password" autocomplete="current-password" required maxlength="256"></label><label>新密码<input name="new" type="password" autocomplete="new-password" required minlength="14" maxlength="256" placeholder="至少 14 个字符"></label><label>再次输入新密码<input name="confirm" type="password" autocomplete="new-password" required minlength="14" maxlength="256"></label><div class="form-actions"><button class="button primary" type="submit">修改密码</button></div><p class="status" role="status" aria-live="polite"></p></form></div>
+    </section>
+  </main>
+  <dialog id="detail-dialog"><div class="dialog-header"><div><div class="eyebrow">REGISTRATION</div><h2>报名详情</h2></div><button class="close-dialog" type="button" aria-label="关闭">×</button></div><div id="detail-content" class="detail-content"></div><form id="forward-form"><label>转发到邮箱<input name="recipient" type="email" required maxlength="254" placeholder="填写收件邮箱"></label><button class="button primary" type="submit">一键转发报名信息 ↗</button><p class="status" role="status" aria-live="polite"></p></form></dialog>
+</body>
+</html>

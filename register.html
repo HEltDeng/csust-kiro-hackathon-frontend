@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#141417">
+  <meta name="description" content="报名参加 KIRO 校园脑洞计划。">
+  <title>报名 · K 校园计划</title>
+  <link rel="icon" href="./assets/kiro-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css?v=20261104-5">
+  <script src="./app.js?v=20261104-5" defer></script>
+</head>
+<body class="register-page">
+  <a class="skip-link" href="#main" data-zh="跳到主要内容" data-en="Skip to content">跳到主要内容</a>
+  <header class="site-header"><div class="nav-wrap"><a class="brand" href="./"><img class="brand-ghost" src="./assets/kiro-icon.svg" alt=""><strong>K 校园计划</strong><span>K CAMPUS IDEA</span></a><div class="nav-actions"><button class="language" type="button" id="language" aria-label="Switch to English">EN</button></div></div></header>
+  <main id="main" class="register-shell wrap">
+    <div class="register-heading"><a class="back-link" href="./" data-zh="← 返回活动首页" data-en="← Back to event">← 返回活动首页</a><div class="section-title"><h1 data-zh="报名参加" data-en="Register to join">报名参加</h1><span>JOIN THE JAM</span></div><p data-zh="把你的想法告诉我们，一起在校园开造。" data-en="Tell us about your idea. Let's build together.">把你的想法告诉我们，一起在校园开造。</p></div>
+    <div class="register-layout">
+      <div class="register-form-card card">
+        <div id="registration-unavailable" class="notice unavailable" hidden data-zh="报名服务暂时无法连接，请稍后重试。" data-en="Registration is temporarily unavailable. Please try again later.">报名服务暂时无法连接，请稍后重试。</div>
+        <noscript><p>报名需要启用 JavaScript。 / Please enable JavaScript to register.</p><style>#registration-form{display:none}</style></noscript>
+        <form id="registration-form" method="post" action="./api/registrations" novalidate>
+          <div class="form-section"><div class="form-section-title"><span>01</span><h2 data-zh="关于你" data-en="About you">关于你</h2></div><div class="form-grid">
+            <label><span data-zh="姓名 *" data-en="Name *">姓名 *</span><input name="name" autocomplete="name" maxlength="40" required data-placeholder-zh="你的姓名" data-placeholder-en="Your name" placeholder="你的姓名"></label>
+            <label><span data-zh="学校 / 院系 *" data-en="University / department *">学校 / 院系 *</span><input name="affiliation" autocomplete="organization" maxlength="100" required data-placeholder-zh="学校和院系" data-placeholder-en="University and department" placeholder="学校和院系"></label>
+            <label class="full-field"><span data-zh="联系方式 *" data-en="Contact *">联系方式 *</span><input name="contact" maxlength="120" required data-placeholder-zh="邮箱、微信或手机号" data-placeholder-en="Email, WeChat or phone number" placeholder="邮箱、微信或手机号"></label>
+            <label class="full-field"><span data-zh="你更擅长什么？" data-en="What do you enjoy doing?">你更擅长什么？</span><select name="role"><option value="" data-zh="请选择（选填）" data-en="Choose one (optional)">请选择（选填）</option><option value="开发" data-zh="开发" data-en="Development">开发</option><option value="设计" data-zh="设计" data-en="Design">设计</option><option value="产品策划" data-zh="产品策划" data-en="Product and planning">产品策划</option><option value="创意与其他" data-zh="创意与其他" data-en="Ideas and other">创意与其他</option></select></label>
+          </div></div>
+          <div class="form-section"><div class="form-section-title"><span>02</span><h2 data-zh="参赛方式" data-en="How will you join?">参赛方式</h2></div><p class="team-rule" data-zh="个人或组队均可，每队最多 3 人。" data-en="Join individually or in a team of up to three.">个人或组队均可，每队最多 3 人。</p><div class="form-grid">
+            <label><span data-zh="参与方式 *" data-en="Joining as *">参与方式 *</span><select name="team_status" required><option value="" data-zh="请选择" data-en="Choose one">请选择</option><option value="个人报名" data-zh="个人报名" data-en="An individual">个人报名</option><option value="已有队伍" data-zh="已有队伍" data-en="A team">已有队伍</option></select></label>
+            <label><span data-zh="队伍名称" data-en="Team name">队伍名称</span><input name="team_name" maxlength="80" data-placeholder-zh="如有队伍，可填写" data-placeholder-en="If you already have one" placeholder="如有队伍，可填写"></label>
+          </div></div>
+          <div class="form-section"><div class="form-section-title"><span>03</span><h2 data-zh="你的脑洞" data-en="Your idea">你的脑洞</h2></div><div class="form-grid">
+            <label class="full-field"><span data-zh="选择赛道 *" data-en="Choose a track *">选择赛道 *</span><select name="track" required><option value="" data-zh="请选择" data-en="Choose one">请选择</option><option value="校园奇妙物" data-zh="校园奇妙物" data-en="Wonderfully Weird">校园奇妙物</option><option value="校园开挂术" data-zh="校园开挂术" data-en="Campus Level-Up">校园开挂术</option><option value="一点小温暖" data-zh="一点小温暖" data-en="A Little More Human">一点小温暖</option></select></label>
+            <label class="full-field"><span data-zh="简单介绍你的想法 *" data-en="Tell us about your idea *">简单介绍你的想法 *</span><textarea name="message" maxlength="500" rows="5" required data-placeholder-zh="想做什么？为什么有趣？还没有完整方案也没关系。" data-placeholder-en="What do you want to make, and why? An early idea is enough." placeholder="想做什么？为什么有趣？还没有完整方案也没关系。"></textarea></label>
+          </div></div>
+          <label class="honeypot" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+          <label class="consent"><input type="checkbox" name="consent" required><span data-zh="我同意组织方使用以上信息联系我，处理本次活动报名。" data-en="I agree that the organizers may use these details to contact me about this event registration.">我同意组织方使用以上信息联系我，处理本次活动报名。</span></label>
+          <button class="button button-purple submit-button" type="submit" data-zh="提交报名" data-en="Submit registration">提交报名</button><p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+        <div class="success-panel" id="registration-success" hidden><div class="success-mark">✓</div><h2 data-zh="报名信息已收到！" data-en="Registration received!">报名信息已收到！</h2><p data-zh="后续安排请留意组织方通知。" data-en="The organizers will contact you with next steps.">后续安排请留意组织方通知。</p><a class="button button-purple" href="./" data-zh="返回活动首页" data-en="Back to event">返回活动首页</a></div>
+      </div>
+      <aside class="register-aside"><div class="card summary-card"><img class="summary-ghost" src="./assets/kiro-ghost.svg" alt=""><span class="card-tag">CAMPUS IDEA JAM</span><h2 data-zh="把校园脑洞\n做成真的。" data-en="Make campus ideas\nreal.">把校园脑洞<br>做成真的。</h2><div class="summary-list"><div><span data-zh="拟定日期" data-en="PROPOSED DATES">拟定日期</span><strong>2026.11.28—29</strong></div><div><span data-zh="地点" data-en="LOCATION">地点</span><strong data-zh="长沙理工大学 · 长沙" data-en="CSUST · Changsha">长沙理工大学 · 长沙</strong></div><div><span data-zh="预计人数" data-en="EXPECTED ATTENDEES">预计人数</span><strong>100—200</strong></div></div><a href="./#tracks" data-zh="查看三个赛道 ↗" data-en="Explore the tracks ↗">查看三个赛道 ↗</a></div><p class="summary-note" data-zh="活动安排以组织方后续通知为准。" data-en="Final arrangements will be confirmed by the organizers.">活动安排以组织方后续通知为准。</p></aside>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="wrap"><strong>K 校园计划</strong><span>CHANGSHA · K CAMPUS IDEA · 2026</span></div></footer>
+</body>
+</html>

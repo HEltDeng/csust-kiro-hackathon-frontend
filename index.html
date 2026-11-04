@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#141417">
+  <meta name="description" content="KIRO 校园脑洞计划：在长沙理工大学，用一个周末把校园奇思妙想做出来。">
+  <title>K 校园计划 · Kiro 校园黑客松</title>
+  <link rel="icon" href="./assets/kiro-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css?v=20261104-5">
+  <script src="./app.js?v=20261104-5" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-zh="跳到主要内容" data-en="Skip to content">跳到主要内容</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="./"><img class="brand-ghost" src="./assets/kiro-icon.svg" alt=""><strong>K 校园计划</strong><span>K CAMPUS IDEA</span></a>
+      <nav aria-label="主导航" data-aria-zh="主导航" data-aria-en="Main navigation">
+        <a href="#about" data-zh="活动介绍" data-en="About">活动介绍</a>
+        <a href="#tracks" data-zh="赛道" data-en="Tracks">赛道</a>
+        <a href="#mode" data-zh="参赛形式" data-en="How to join">参赛形式</a>
+        <a href="#agenda" data-zh="议程" data-en="Agenda">议程</a>
+        <a href="#awards" data-zh="奖项" data-en="Awards">奖项</a>
+        <a href="#winners" data-zh="获奖公示" data-en="Winners">获奖公示</a>
+        <a href="#flow" data-zh="流程" data-en="Timeline">流程</a>
+        <a href="#rules" data-zh="规则" data-en="Rules">规则</a>
+        <a href="#criteria" data-zh="评分" data-en="Scoring">评分</a>
+        <a href="#kiro" data-zh="认识 Kiro" data-en="Meet Kiro">认识 Kiro</a>
+      </nav>
+      <div class="nav-actions"><button class="language" type="button" id="language" aria-label="Switch to English">EN</button><a class="button button-yellow nav-register" href="./register.html" data-zh="立即报名" data-en="Register">立即报名</a></div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero-section wrap" id="top">
+      <div class="hero-frame">
+        <div class="hero-copy">
+          <div class="hero-kicker">CHANGSHA · CAMPUS HACKATHON 2026</div>
+          <h1><span class="hero-kiro">KIRO<img class="hero-ghost" src="./assets/kiro-ghost.svg" alt=""></span><br><span data-zh="校园脑洞计划" data-en="Campus Idea Jam">校园脑洞计划</span></h1>
+          <div class="hero-ribbon" data-zh="你的奇思妙想，用 Kiro 做出来。" data-en="Big campus ideas, built with Kiro.">你的奇思妙想，用 Kiro 做出来。</div>
+          <p data-zh="一个周末，把校园里的好点子变成好玩的作品。" data-en="One weekend to turn campus ideas into things worth sharing.">一个周末，把校园里的好点子变成好玩的作品。</p>
+        </div>
+        <div class="hero-image"><img src="./assets/campus-pixel-robot.png" alt="像素风机器人与校园创意工具" data-alt-zh="像素风机器人与校园创意工具" data-alt-en="A pixel-art robot surrounded by creative campus tools"></div>
+      </div>
+      <div class="hero-meta"><span data-zh="报名征集中" data-en="REGISTRATION OPEN">报名征集中</span><span data-zh="拟定 11.28—11.29" data-en="PROPOSED NOV 28—29">拟定 11.28—11.29</span><span data-zh="长沙理工大学 · 线下" data-en="CSUST · IN PERSON">长沙理工大学 · 线下</span><span data-zh="预计 100—200 人" data-en="100—200 ATTENDEES">预计 100—200 人</span></div>
+      <div class="hero-buttons"><a class="button button-purple button-large" href="./register.html" data-zh="立即报名" data-en="Register now">立即报名</a><a class="button button-outline button-large" href="#tracks" data-zh="看看赛道 ↓" data-en="Explore tracks ↓">看看赛道 ↓</a></div>
+    </section>
+    <section class="section wrap" id="announcements" hidden><div class="section-title"><h2 data-zh="活动公告" data-en="Announcements">活动公告</h2><span>UPDATES</span></div><div class="announcement-feed" id="announcement-feed"></div></section>
+    <section class="section wrap" id="about"><div class="section-title"><h2 data-zh="活动介绍" data-en="About the event">活动介绍</h2><span>ABOUT</span></div><div class="about-box"><p class="about-lead" data-zh="校园有很多小问题，也藏着很多大脑洞。" data-en="Campus is full of little problems and wonderfully big ideas.">校园有很多小问题，也藏着很多大脑洞。</p><p data-zh="带上你的奇思妙想，和伙伴一起用 Kiro 构建、试玩、展示。无论你是开发者、设计师，还是单纯有个好点子，都欢迎来玩。" data-en="Bring your ideas and build, test, and share them with Kiro. Developers, designers, and curious people of every background are welcome.">带上你的奇思妙想，和伙伴一起用 Kiro 构建、试玩、展示。无论你是开发者、设计师，还是单纯有个好点子，都欢迎来玩。</p></div></section>
+    <section class="section wrap" id="tracks"><div class="section-title"><h2 data-zh="三大赛道" data-en="Three tracks">三大赛道</h2><span>TRACKS</span></div><p class="section-intro" data-zh="选一个方向，让你的脑洞自由发挥。" data-en="Pick a direction and let your imagination run.">选一个方向，让你的脑洞自由发挥。</p><div class="track-grid">
+      <article class="card track"><div class="track-number">01</div><h3 data-zh="校园奇妙物" data-en="Wonderfully Weird">校园奇妙物</h3><span class="card-tag">WEIRD & WONDERFUL</span><p data-zh="把看似没用、其实超好玩的校园点子做出来。" data-en="Make the campus idea that might be silly, but is impossible to ignore.">把看似没用、其实超好玩的校园点子做出来。</p><div class="example"><strong data-zh="脑洞示例" data-en="IDEA STARTERS">脑洞示例</strong><span data-zh="食堂选饭大转盘 · 神奇室友翻译器" data-en="Cafeteria roulette · Roommate translator">食堂选饭大转盘 · 神奇室友翻译器</span></div></article>
+      <article class="card track"><div class="track-number">02</div><h3 data-zh="校园开挂术" data-en="Campus Level-Up">校园开挂术</h3><span class="card-tag">LIFE, LEVELLED UP</span><p data-zh="让赶课、学习、社团和生活里的小麻烦变简单。" data-en="Make classes, clubs, and everyday campus life a little easier.">让赶课、学习、社团和生活里的小麻烦变简单。</p><div class="example"><strong data-zh="脑洞示例" data-en="IDEA STARTERS">脑洞示例</strong><span data-zh="赶课路线探险 · 活动搭子雷达" data-en="Class-route adventure · Club buddy finder">赶课路线探险 · 活动搭子雷达</span></div></article>
+      <article class="card track"><div class="track-number">03</div><h3 data-zh="一点小温暖" data-en="A Little More Human">一点小温暖</h3><span class="card-tag">CODE WITH HEART</span><p data-zh="为身边的人做一个更友好、更有温度的工具。" data-en="Build something kinder and more welcoming for people around you.">为身边的人做一个更友好、更有温度的工具。</p><div class="example"><strong data-zh="脑洞示例" data-en="IDEA STARTERS">脑洞示例</strong><span data-zh="新生互助助手 · 无障碍校园伙伴" data-en="New-student helper · Accessibility companion">新生互助助手 · 无障碍校园伙伴</span></div></article>
+    </div></section>
+    <section class="section wrap" id="mode">
+      <div class="section-title"><h2 data-zh="参赛形式" data-en="How to join">参赛形式</h2><span>HOW TO JOIN</span></div>
+      <div class="card offline-card">
+        <div><span class="card-tag">OFFLINE · CHANGSHA</span><h3 data-zh="线下赛 · 把脑洞带到现场" data-en="In person · Bring your idea to life">线下赛 · 把脑洞带到现场</h3><p data-zh="个人或组队报名，提交你的校园创意；审核通过后，带上电脑到现场，用 Kiro 完成作品。" data-en="Register solo or as a team with your campus idea. Once confirmed, bring a laptop and build your project with Kiro at the event.">个人或组队报名，提交你的校园创意；审核通过后，带上电脑到现场，用 Kiro 完成作品。</p></div>
+        <div class="offline-facts"><div><strong>1—3</strong><span data-zh="人 / 队" data-en="people / team">人 / 队</span></div><div><strong>150</strong><span data-zh="分钟极限开发" data-en="minutes to build">分钟极限开发</span></div><div><strong>100—200</strong><span data-zh="预计参与人数" data-en="expected attendees">预计参与人数</span></div></div>
+      </div><div class="notice" data-zh="仅线下参与 · 报名时无需已有作品 · 自带电脑" data-en="IN PERSON ONLY · NO FINISHED PROJECT NEEDED TO REGISTER · BRING A LAPTOP">仅线下参与 · 报名时无需已有作品 · 自带电脑</div>
+    </section>
+    <section class="section wrap" id="agenda">
+      <div class="section-title"><h2 data-zh="现场议程" data-en="Event agenda">现场议程</h2><span>AGENDA</span></div>
+      <p class="section-intro" data-zh="以下为拟定安排，时间均为北京时间；具体时间和地点以最终通知为准。" data-en="Proposed schedule, China Standard Time. Final times and venue will be confirmed in the event notice.">以下为拟定安排，时间均为北京时间；具体时间和地点以最终通知为准。</p>
+      <div class="agenda-list">
+        <article class="card schedule-card"><div class="schedule-heading"><div><span class="card-tag">DAY 01 · SATURDAY</span><h3 data-zh="11 月 28 日 · 认识与构思" data-en="November 28 · Meet and ideate">11 月 28 日 · 认识与构思</h3></div><span class="schedule-badge" data-zh="拟定" data-en="PROPOSED">拟定</span></div>
+          <table class="schedule-table"><thead><tr><th data-zh="时间" data-en="Time">时间</th><th data-zh="时长" data-en="Length">时长</th><th data-zh="环节" data-en="Activity">环节</th></tr></thead><tbody>
+            <tr><th scope="row">13:00–13:30</th><td>30 min</td><td data-zh="签到与破冰" data-en="Check-in and introductions">签到与破冰</td></tr>
+            <tr><th scope="row">13:30–14:00</th><td>30 min</td><td data-zh="Kiro 快速上手" data-en="Getting started with Kiro">Kiro 快速上手</td></tr>
+            <tr><th scope="row">14:00–15:00</th><td>60 min</td><td data-zh="创意交流与组队" data-en="Ideas and team formation">创意交流与组队</td></tr>
+            <tr><th scope="row">15:00–16:00</th><td>60 min</td><td data-zh="确定赛道与方案梳理" data-en="Choose a track and plan">确定赛道与方案梳理</td></tr>
+          </tbody></table></article>
+        <article class="card schedule-card"><div class="schedule-heading"><div><span class="card-tag">DAY 02 · SUNDAY</span><h3 data-zh="11 月 29 日 · 极限开发与展示" data-en="November 29 · Build and demo">11 月 29 日 · 极限开发与展示</h3></div><span class="schedule-badge" data-zh="拟定" data-en="PROPOSED">拟定</span></div>
+          <table class="schedule-table"><thead><tr><th data-zh="时间" data-en="Time">时间</th><th data-zh="时长" data-en="Length">时长</th><th data-zh="环节" data-en="Activity">环节</th></tr></thead><tbody>
+            <tr><th scope="row">12:30–13:00</th><td>30 min</td><td data-zh="签到与准备" data-en="Check-in and setup">签到与准备</td></tr>
+            <tr><th scope="row">13:00–13:10</th><td>10 min</td><td data-zh="赛制宣讲" data-en="Competition briefing">赛制宣讲</td></tr>
+            <tr><th scope="row">13:10–13:40</th><td>30 min</td><td data-zh="Kiro 使用分享" data-en="Kiro workflow session">Kiro 使用分享</td></tr>
+            <tr class="highlight-row"><th scope="row">13:40–16:10</th><td>150 min</td><td data-zh="校园脑洞极限开发" data-en="150-minute build challenge">校园脑洞极限开发</td></tr>
+            <tr><th scope="row">16:10–16:40</th><td>30 min</td><td data-zh="评审预审" data-en="Preliminary judging">评审预审</td></tr>
+            <tr><th scope="row">16:40–17:40</th><td>60 min</td><td data-zh="现场创意拍卖会" data-en="Live idea auction and demos">现场创意拍卖会</td></tr>
+            <tr><th scope="row">17:40–17:55</th><td>15 min</td><td data-zh="颁奖典礼" data-en="Awards ceremony">颁奖典礼</td></tr>
+            <tr><th scope="row">17:55–18:00</th><td>5 min</td><td data-zh="全场合影" data-en="Group photo">全场合影</td></tr>
+          </tbody></table></article>
+      </div><div class="notice" data-zh="评委按评分标准分组预审，入围团队参加现场创意拍卖会；展示与互动方式以现场通知为准。" data-en="Judges review entries in groups; shortlisted teams join the live idea auction. The event notice will confirm the demo format.">评委按评分标准分组预审，入围团队参加现场创意拍卖会；展示与互动方式以现场通知为准。</div>
+    </section>
+    <section class="section wrap" id="awards">
+      <div class="section-title"><h2 data-zh="奖项设置" data-en="Awards">奖项设置</h2><span>AWARDS</span></div>
+      <p class="section-intro" data-zh="线下赛拟设以下奖项；奖品暂定，将与亚马逊方面沟通确认。" data-en="Proposed in-person awards. Prizes are to be confirmed with Amazon.">线下赛拟设以下奖项；奖品暂定，将与亚马逊方面沟通确认。</p>
+      <div class="card prize-card"><table class="prize-table"><thead><tr><th data-zh="奖项" data-en="Award">奖项</th><th data-zh="名额" data-en="Recipients">名额</th></tr></thead><tbody>
+        <tr><th scope="row" data-zh="冠军" data-en="Champion">冠军</th><td data-zh="1 队" data-en="1 team">1 队</td></tr>
+        <tr><th scope="row" data-zh="亚军" data-en="Runner-up">亚军</th><td data-zh="1 队" data-en="1 team">1 队</td></tr>
+        <tr><th scope="row" data-zh="季军" data-en="Third place">季军</th><td data-zh="1 队" data-en="1 team">1 队</td></tr>
+        <tr><th scope="row" data-zh="优秀奖" data-en="Outstanding teams">优秀奖</th><td data-zh="7 队" data-en="7 teams">7 队</td></tr>
+        <tr><th scope="row" data-zh="参与奖" data-en="Participation">参与奖</th><td data-zh="到场参赛队伍" data-en="Teams attending in person">到场参赛队伍</td></tr>
+      </tbody></table></div><p class="award-note" data-zh="具体奖品、发放方式及最终名额以正式通知为准。" data-en="Final prizes, distribution, and award counts will be announced in the official event notice.">具体奖品、发放方式及最终名额以正式通知为准。</p>
+    </section>
+    <section class="section wrap" id="winners"><div class="section-title"><h2 data-zh="获奖公示" data-en="Winners">获奖公示</h2><span>WINNERS</span></div><div class="card winners-card"><strong data-zh="获奖名单将在赛后公布" data-en="Winners will be announced after the event">获奖名单将在赛后公布</strong><p data-zh="拟定公示时间：11 月 30 日 18:00 至 12 月 3 日 18:00（北京时间）。" data-en="Proposed review period: November 30, 18:00 to December 3, 18:00 (China Standard Time).">拟定公示时间：11 月 30 日 18:00 至 12 月 3 日 18:00（北京时间）。</p></div></section>
+    <section class="section wrap" id="flow">
+      <div class="section-title"><h2 data-zh="参赛流程与时间线" data-en="Participation timeline">参赛流程与时间线</h2><span>TIMELINE</span></div>
+      <p class="section-intro" data-zh="以下时间为拟定方案，均按北京时间计算。" data-en="Proposed dates and times, China Standard Time.">以下时间为拟定方案，均按北京时间计算。</p>
+      <div class="timeline-list"><article class="timeline-item"><span data-zh="即日起—11.26 23:59" data-en="NOW—NOV 26, 23:59">即日起—11.26 23:59</span><div><h3 data-zh="报名征集" data-en="Registration">报名征集</h3><p data-zh="填写报名信息和校园创意；无需提前提交成品。" data-en="Submit your details and campus idea; no finished project is required.">填写报名信息和校园创意；无需提前提交成品。</p></div></article>
+      <article class="timeline-item"><span>11.27</span><div><h3 data-zh="确认参与" data-en="Participation confirmation">确认参与</h3><p data-zh="组织方审核报名并通知参赛安排。" data-en="The organizers review registrations and share participation details.">组织方审核报名并通知参赛安排。</p></div></article>
+      <article class="timeline-item"><span>11.28—11.29</span><div><h3 data-zh="线下黑客松" data-en="In-person hackathon">线下黑客松</h3><p data-zh="第一天交流组队，第二天完成 150 分钟开发、预审、拍卖会与颁奖。" data-en="Meet and form teams on day one; build for 150 minutes, present, and celebrate on day two.">第一天交流组队，第二天完成 150 分钟开发、预审、拍卖会与颁奖。</p></div></article>
+      <article class="timeline-item"><span data-zh="11.30 18:00—12.03 18:00" data-en="NOV 30, 18:00—DEC 3, 18:00">11.30 18:00—12.03 18:00</span><div><h3 data-zh="获奖公示" data-en="Winners announced">获奖公示</h3><p data-zh="拟于赛后公布评审结果，公示 3 天。" data-en="Results are planned to be posted after the event for a three-day review period.">拟于赛后公布评审结果，公示 3 天。</p></div></article></div>
+    </section>
+    <section class="section wrap" id="rules">
+      <div class="section-title"><h2 data-zh="参赛规则" data-en="Competition rules">参赛规则</h2><span>RULES</span></div>
+      <div class="card rules-box"><p><strong data-zh="组队" data-en="Teams">组队</strong><span data-zh="个人或组队均可，每队最多 3 人，欢迎跨专业搭配。" data-en="Join individually or in a team of up to three; cross-disciplinary teams are welcome.">个人或组队均可，每队最多 3 人，欢迎跨专业搭配。</span></p>
+      <p><strong data-zh="报名" data-en="Registration">报名</strong><span data-zh="选择赛道并提交创意；线下报名无需提前完成作品。" data-en="Choose a track and submit an idea; a completed project is not required to register.">选择赛道并提交创意；线下报名无需提前完成作品。</span></p>
+      <p><strong data-zh="现场开发" data-en="Build period">现场开发</strong><span data-zh="统一进行 150 分钟开发；不得使用赛前已完成的项目主体。自有组件和符合许可的开源依赖可复用。" data-en="Build during the 150-minute session. The main project must not be completed in advance; your own components and properly licensed open-source dependencies may be reused.">统一进行 150 分钟开发；不得使用赛前已完成的项目主体。自有组件和符合许可的开源依赖可复用。</span></p>
+      <p><strong data-zh="开发工具" data-en="Tools">开发工具</strong><span data-zh="使用 Kiro 参与创作，自带电脑并提前准备账号。积分与现场支持以最终通知为准。" data-en="Build with Kiro, bring a laptop, and prepare an account. Credits and on-site support will be confirmed later.">使用 Kiro 参与创作，自带电脑并提前准备账号。积分与现场支持以最终通知为准。</span></p>
+      <p><strong data-zh="原创与展示" data-en="Original work">原创与展示</strong><span data-zh="作品须为原创，严禁抄袭；提交可运行的核心功能并进行现场展示。" data-en="Submit original work; plagiarism is prohibited. The core functionality must run and be demonstrated in person.">作品须为原创，严禁抄袭；提交可运行的核心功能并进行现场展示。</span></p></div>
+    </section>
+    <section class="section wrap" id="criteria">
+      <div class="section-title"><h2 data-zh="评审标准" data-en="Judging criteria">评审标准</h2><span>CRITERIA</span></div>
+      <p class="section-intro" data-zh="参考 Kiro 鬼点子计划的现场评分标准，总分 100 分。" data-en="Based on the Kiro Wacky Ideas in-person scoring criteria, out of 100 points.">参考 Kiro 鬼点子计划的现场评分标准，总分 100 分。</p>
+      <div class="criteria-grid"><article class="card score-card"><div><b data-zh="脑洞有多大" data-en="Imagination">脑洞有多大</b><strong>35%</strong></div><p data-zh="创意是否出人意料，让人眼前一亮。" data-en="Is the idea surprising, original, and memorable?">创意是否出人意料，让人眼前一亮。</p></article>
+      <article class="card score-card"><div><b data-zh="Kiro 用得有多深" data-en="Use of Kiro">Kiro 用得有多深</b><strong>35%</strong></div><p data-zh="是否充分运用 Kiro 辅助需求、开发和迭代。" data-en="How effectively was Kiro used throughout development?">是否充分运用 Kiro 辅助需求、开发和迭代。</p></article>
+      <article class="card score-card"><div><b data-zh="交付有多惊艳" data-en="Execution">交付有多惊艳</b><strong>30%</strong></div><p data-zh="核心功能是否可运行、体验是否流畅；按 150 分钟开发基准评估。" data-en="Does the core functionality work smoothly, considering the 150-minute build window?">核心功能是否可运行、体验是否流畅；按 150 分钟开发基准评估。</p></article></div>
+    </section>
+    <section class="section wrap" id="kiro">
+      <div class="section-title"><h2 data-zh="认识 Kiro" data-en="Meet Kiro">认识 Kiro</h2><span>MEET KIRO</span></div>
+      <div class="card kiro-resources"><p data-zh="Kiro 是 AI 辅助开发工具，帮助你把创意拆成需求、设计与任务，再逐步做成可运行的作品。" data-en="Kiro helps turn ideas into requirements, designs, tasks, and working software with AI-assisted development.">Kiro 是 AI 辅助开发工具，帮助你把创意拆成需求、设计与任务，再逐步做成可运行的作品。</p>
+        <div class="kiro-feature-grid"><article><h3 data-zh="Spec 驱动开发" data-en="Spec-driven development">Spec 驱动开发</h3><p data-zh="把想法整理为需求、设计与任务。" data-en="Organize an idea into requirements, design, and tasks.">把想法整理为需求、设计与任务。</p></article><article><h3 data-zh="智能体协作" data-en="Agent collaboration">智能体协作</h3><p data-zh="用智能体辅助编写、修改和完善作品。" data-en="Use agents to help build, revise, and refine a project.">用智能体辅助编写、修改和完善作品。</p></article><article><h3 data-zh="Hooks 自动化" data-en="Hooks automation">Hooks 自动化</h3><p data-zh="让重复的开发流程按需要自动运行。" data-en="Automate recurring development tasks when needed.">让重复的开发流程按需要自动运行。</p></article></div>
+        <div class="resource-group"><h3 data-zh="下载与入口" data-en="Downloads and entry points">下载与入口</h3><div class="resource-links"><a href="https://kiro.dev/ide/" target="_blank" rel="noopener noreferrer">Kiro IDE ↗</a><a href="https://kiro.dev/cli/" target="_blank" rel="noopener noreferrer">Kiro CLI ↗</a><a href="https://app.kiro.dev/" target="_blank" rel="noopener noreferrer">Kiro Web ↗</a><a href="https://kiro.dev/crew/" target="_blank" rel="noopener noreferrer">Kiro Crew ↗</a><a href="https://kiro.dev/mobile/" target="_blank" rel="noopener noreferrer">Kiro Mobile ↗</a><a href="https://kiro.dev/docs/" target="_blank" rel="noopener noreferrer" data-zh="开发文档 ↗" data-en="Documentation ↗">开发文档 ↗</a></div></div>
+      </div>
+      <div class="resource-group"><div class="section-title subsection-title"><h2 data-zh="上手必读" data-en="Getting started">上手必读</h2><span>READ & BUILD</span></div><div class="article-grid"><a class="card article-card" href="https://kiro.dev/blog/which-kiro-app-should-i-pick/" target="_blank" rel="noopener noreferrer"><span class="card-tag">START</span><strong data-zh="如何选择 Kiro 的使用方式？" data-en="Which Kiro app should I pick?">如何选择 Kiro 的使用方式？</strong><span data-zh="了解不同入口，找到适合你的工具。" data-en="Find the right Kiro entry point for your workflow.">了解不同入口，找到适合你的工具。</span><b data-zh="阅读文章 ↗" data-en="Read article ↗">阅读文章 ↗</b></a><a class="card article-card" href="https://kiro.dev/blog/introducing-kiro-crew/" target="_blank" rel="noopener noreferrer"><span class="card-tag">CREW</span><strong data-zh="认识 Kiro Crew" data-en="Introducing Kiro Crew">认识 Kiro Crew</strong><span data-zh="了解 Kiro Crew 与智能体协作。" data-en="Explore Kiro Crew and agent collaboration.">了解 Kiro Crew 与智能体协作。</span><b data-zh="阅读文章 ↗" data-en="Read article ↗">阅读文章 ↗</b></a><a class="card article-card" href="https://kiro.dev/blog/software-factory-1000-prs/" target="_blank" rel="noopener noreferrer"><span class="card-tag">CASE</span><strong data-zh="Kiro Crew 实战案例" data-en="Kiro Crew in practice">Kiro Crew 实战案例</strong><span data-zh="看看团队如何用智能体协作开发。" data-en="See how a team built software with agents.">看看团队如何用智能体协作开发。</span><b data-zh="阅读文章 ↗" data-en="Read article ↗">阅读文章 ↗</b></a></div></div>
+      <div class="resource-group"><div class="section-title subsection-title"><h2 data-zh="上手直播回放" data-en="Getting-started replay">上手直播回放</h2><span>LIVE REPLAY</span></div><div class="card replay-card"><div><h3 data-zh="上手 Kiro Crew 一起造" data-en="Build together with Kiro Crew">上手 Kiro Crew 一起造</h3><p data-zh="观看 Kiro Crew 的功能介绍与现场演示。" data-en="Watch a Kiro Crew introduction and live demonstration.">观看 Kiro Crew 的功能介绍与现场演示。</p></div><a class="button button-outline" href="https://live.csdn.net/room/csdnnews/eiIRkkmF" target="_blank" rel="noopener noreferrer" data-zh="观看回放 ↗" data-en="Watch replay ↗">观看回放 ↗</a></div></div>
+    </section>
+    <section class="join-banner wrap"><img class="banner-ghost" src="./assets/kiro-ghost.svg" alt=""><div class="banner-spark" data-zh="报名征集中" data-en="REGISTRATION OPEN">报名征集中</div><h2 data-zh="别让好点子，\n只留在备忘录里。" data-en="Your idea deserves\nto exist.">别让好点子，<br>只留在备忘录里。</h2><p data-zh="带上你的脑洞，来一起开造。" data-en="Bring your idea. Let's build it.">带上你的脑洞，来一起开造。</p><a class="button button-yellow button-large" href="./register.html" data-zh="立即报名" data-en="Register now">立即报名</a></section>
+  </main>
+  <footer class="site-footer"><div class="wrap"><strong>K 校园计划</strong><span>CHANGSHA · K CAMPUS IDEA · 2026</span></div></footer>
+</body>
+</html>
